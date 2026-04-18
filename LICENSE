@@ -1,0 +1,306 @@
+# EVERYBASE PUBLIC LICENSE (EBPL) – VERSION 0.9
+
+> **Contact / Permission Requests:** alexanderschwarz148@gmail.com  
+> **Author:** EveryBase Project / Alexander Schwarz
+
+---
+
+## PREAMBLE
+
+This License governs the use, modification, and distribution of the EveryBase software
+("Software"). It is designed to allow broad personal, educational, and non-profit use
+while protecting the Author's rights to commercialize the Software and maintain its
+integrity. Users are encouraged to read this License carefully before interacting with
+the Software.
+
+---
+
+## DEFINITIONS
+
+For purposes of this License, the following terms have the meanings set out below:
+
+- **"Author"** means [Your Full Name or Organization], the original creator and rights
+  holder of the Software, reachable at alexanderschwarz148@gmail.com.
+
+- **"Software"** means the EveryBase core codebase, including all files, documentation,
+  scripts, and assets distributed under this License.
+
+- **"Extension"** means any plugin, custom validator, custom field, or other software
+  component that interacts with the Software exclusively through its official, publicly
+  documented APIs, without modifying the core codebase.
+
+- **"Contribution"** means any modification, bugfix, patch, or improvement to the core
+  codebase submitted to the Author or the official repository by any person or entity
+  other than the Author.
+
+- **"Commercial Use"** means any use intended for or resulting in financial gain,
+  including but not limited to: use by for-profit legal entities; use in client or
+  freelance work; use to provide paid services or Software-as-a-Service (SaaS) to
+  third parties; and use by any entity whose primary purpose is commercial, regardless
+  of whether revenue is currently generated.
+
+- **"You"** (or "Licensee") means the individual or legal entity exercising the rights
+  granted under this License.
+
+---
+
+## 1. GRANT OF LICENSE
+
+### 1.1 Acceptance
+
+This License takes effect at the moment You **download or install** the Software.
+Mere viewing of the source code in a public repository does not constitute acceptance.
+By downloading or installing the Software, You confirm that You have read, understood,
+and agree to be bound by all terms of this License.
+
+### 1.2 Scope of Grant
+
+Subject to the terms and conditions of this License, the Author grants You a
+worldwide, non-exclusive, non-transferable, revocable (as set forth in Section 5)
+right to use, copy, and modify the Software for permitted purposes only.
+
+---
+
+## 2. PERMITTED USE
+
+### 2.1 Non-Commercial Use
+
+The Software is free for **personal, educational, and non-profit use**, provided that:
+
+- The using entity holds valid non-profit status under applicable law, or the use is
+  strictly personal or educational in nature; and
+- No revenue, compensation, or financial benefit is derived, directly or indirectly,
+  from the use of the Software.
+
+### 2.2 Commercial Use Requires Permission
+
+Any **Commercial Use** of the Software—including but not limited to use in SaaS
+products, client projects, or commercial internal tools—**requires prior written
+permission** from the Author. Permission requests must be directed to alexanderschwarz148@gmail.com.
+The Author may grant or withhold permission at their sole discretion and may impose
+additional conditions, including licensing fees.
+
+---
+
+## 3. MODIFICATIONS, CONTRIBUTIONS, AND EXTENSIONS
+
+### 3.1 Extension Freedom
+
+You are encouraged to develop Extensions that interact with the Software through its
+official, publicly documented APIs. Such Extensions remain Your sole property,
+provided they do not incorporate, reproduce, or modify the core codebase.
+
+### 3.2 Private Forks
+
+You may create private forks of the Software for personal or internal organizational
+use. Private forks must not be publicly hosted, mirrored, or distributed. Such forks
+remain subject to all terms of this License.
+
+### 3.3 Contributions
+
+Any Contributions to the core codebase that You submit to the Author or the official
+repository may be reviewed and integrated at the Author's sole discretion. By
+submitting a Contribution, You represent that You have the legal right to do so.
+
+### 3.4 Voluntary Compensation for Contributions
+
+The Author is under no obligation to compensate Contributors. However, the Author
+reserves the right to provide voluntary compensation for outstanding, high-impact, or
+excellent Contributions at their sole discretion.
+
+### 3.5 Transfer of Intellectual Property Rights upon Compensation
+
+If the Author offers compensation for a specific Contribution and **the Contributor
+expressly accepts such offer in writing**, then upon receipt of compensation that is
+fair and reasonable in relation to the market value of the Contribution at the time of
+transfer, all intellectual property rights in that specific Contribution are
+transferred exclusively to the Author. No transfer of IP rights occurs without the
+Contributor's prior written acceptance of the compensation offer. Disputes about
+whether compensation is fair and reasonable shall be resolved as set out in Section 9.
+
+---
+
+## 4. PROHIBITIONS
+
+### 4.1 No Resale or Sublicensing
+
+Selling, renting, sublicensing, or otherwise transferring the core Software or any
+modified version of the core Software to any third party is strictly prohibited,
+unless expressly authorized by the Author in writing.
+
+### 4.2 No Attribution Removal
+
+You must keep all original "EveryBase" branding, copyright notices, and license
+headers intact in all copies or substantial portions of the Software. Attribution
+must be preserved in documentation, user interfaces, and/or source file headers, as
+applicable to the nature of the Software's use. Deviations from this requirement
+require prior written permission from the Author.
+
+### 4.3 No Public Redistribution of Core Source Code
+
+Public hosting, mirroring, or redistribution of the core source code—in whole or in
+part—is prohibited. Users and organizations seeking access to the Software must be
+directed to the official repository. Private forks for internal use are permitted
+under Section 3.2.
+
+### 4.4 No Competitive or Public Benchmarking
+
+You may not publish the results of any benchmark or performance tests conducted on the
+Software to third parties for marketing, advertising, or competitive comparison
+purposes, without prior written consent from the Author. Internal benchmarking and
+performance testing for Your own evaluation purposes is permitted.
+
+---
+
+## 5. LICENSE REVOCATION
+
+### 5.1 Breach-Based Revocation
+
+The Author reserves the right to revoke this License in the event of a material
+breach of its terms, including but not limited to: unauthorized Commercial Use,
+prohibited redistribution, IP infringement, or violation of the attribution
+requirements.
+
+### 5.2 Notice and Cure Period
+
+Prior to revocation, the Author shall provide You with written notice specifying the
+alleged breach. You shall have **30 days** from the date of such notice to cure the
+breach to the Author's reasonable satisfaction. If the breach is cured within this
+period, the License shall remain in effect.
+
+### 5.3 Immediate Revocation
+
+Notwithstanding Section 5.2, the Author may revoke this License with immediate effect
+and without a cure period in cases of:
+
+- willful or repeated violation of this License;
+- use of the Software for unlawful purposes; or
+- conduct that causes or is likely to cause material harm to the Author, the Software,
+  or the EveryBase community.
+
+### 5.4 Effect of Revocation
+
+Upon revocation becoming effective, You must immediately cease all use of the Software
+and delete or destroy all copies of the core source code in Your possession or control.
+Revocation does not affect rights previously granted to third parties in accordance
+with this License, provided those third parties are not themselves in breach.
+
+---
+
+## 6. PRIVACY AND DATA COLLECTION
+
+The Software **does not currently collect, store, or transmit any personal data or
+telemetry** to the Author or any third parties.
+
+The Author reserves the right to introduce optional, opt-in telemetry or analytics
+features in future versions of the Software. Any such feature will be:
+
+- strictly opt-in and disabled by default;
+- clearly disclosed in the release notes of the relevant version; and
+- governed by a separate, GDPR-compliant Privacy Policy that will be published and
+  linked from the official repository at that time.
+
+Until such a Privacy Policy is published, no data collection of any kind takes place.
+
+---
+
+## 7. THIRD-PARTY DEPENDENCIES
+
+The Software may include or depend upon third-party libraries or components distributed
+under their own licenses (e.g., MIT, Apache 2.0). Such third-party components are not
+covered by this License. You are responsible for reviewing and complying with the
+licenses of any third-party dependencies used in conjunction with the Software. A list
+of third-party dependencies and their respective licenses is maintained in the
+`THIRD_PARTY_NOTICES` file in the official repository.
+
+---
+
+## 8. LIMITATION OF LIABILITY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, OR NON-INFRINGEMENT.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR SHALL NOT BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES,
+INCLUDING BUT NOT LIMITED TO DATA LOSS, FINANCIAL LOSS, LOSS OF PROFITS, BUSINESS
+INTERRUPTION, OR SYSTEM FAILURES, HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT, ARISING OUT OF OR IN CONNECTION WITH
+THE SOFTWARE OR THIS LICENSE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+---
+
+## 9. DISPUTE RESOLUTION
+
+### 9.1 Good Faith Negotiation
+
+In the event of any dispute arising out of or relating to this License, the parties
+shall first attempt to resolve the matter through good faith negotiation for a period
+of **30 days** from the date on which one party notifies the other in writing of the
+dispute.
+
+### 9.2 Mediation
+
+If the dispute is not resolved through negotiation, either party may refer the dispute
+to non-binding mediation administered by a mutually agreed-upon mediator. The costs of
+mediation shall be shared equally unless otherwise agreed.
+
+### 9.3 Litigation
+
+If mediation fails or is not initiated within **60 days** of the original dispute
+notice, either party may pursue resolution through the courts specified in Section 10.
+
+---
+
+## 10. GOVERNING LAW AND JURISDICTION
+
+This License shall be governed by and construed in accordance with the laws of
+**Germany**, without regard to its conflict of law principles. Any legal
+action or proceeding arising under this License shall be brought exclusively in the
+courts of **Germany**, and each party hereby submits to the personal
+jurisdiction of such courts.
+
+---
+
+## 11. LICENSE VERSIONING AND UPDATES
+
+The Author may publish updated versions of this License from time to time. Each
+version will be assigned a distinct version number. You may continue to use the
+Software under the version of the License that was in effect when You first accepted
+it, or You may choose to upgrade to a newer version at any time. The Author will
+publish all versions of the License in the official repository.
+
+---
+
+## 12. PROJECT DISCONTINUATION
+
+In the event that the Author permanently discontinues active development and
+maintenance of the Software ("Abandonment"), and provided the Software has not been
+transferred to a successor maintainer within **12 months** of the last official
+commit to the official repository, the Author agrees to release the core Software
+under the **MIT License**, automatically and without further action required. This
+provision is reversable.
+
+---
+
+## 13. SEVERABILITY
+
+If any provision of this License is held to be invalid, illegal, or unenforceable
+under applicable law, such provision shall be modified to the minimum extent necessary
+to make it enforceable, or if modification is not possible, severed from this License.
+The remaining provisions shall continue in full force and effect.
+
+---
+
+## 14. ENTIRE AGREEMENT
+
+This License constitutes the entire agreement between You and the Author with respect
+to the Software and supersedes all prior or contemporaneous agreements, representations,
+or understandings relating to its subject matter. No waiver of any term shall be
+deemed a further or continuing waiver of that term or any other term.
+
+---
+
+*Copyright © 2026 EveryBase Project / Alexander Schwarz. All rights reserved.*
+
+*For permissions, licensing inquiries, or questions: alexanderschwarz148@gmail.com*
