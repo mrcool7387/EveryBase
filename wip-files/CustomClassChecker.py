@@ -1,5 +1,7 @@
 import inspect
 from collections.abc import Callable
+from types import FunctionType, MappingProxyType
+from typing import Any
 
 
 def internal(func: Callable) -> Callable:
@@ -14,7 +16,7 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
     class_errors: list[Exception] = []
 
     # 1. Validate Methods
-    found_methods = {
+    found_methods: dict[str, FunctionType] = {
         name: func
         for name, func in inspect.getmembers(cls, predicate=inspect.isfunction)
         if not (name.startswith("__") and name.endswith("__"))
@@ -29,8 +31,8 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
             )
             continue
 
-        sig = inspect.signature(found_methods[method_name])
-        params = sig.parameters
+        sig: inspect.Signature = inspect.signature(found_methods[method_name])
+        params: MappingProxyType[str, inspect.Parameter] = sig.parameters
 
         for p_name in expected_params:
             if p_name == "args":
@@ -54,8 +56,8 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
         if method_name in required_methods:
             continue
 
-        has_underscore = method_name.startswith("_")
-        has_internal_attr = getattr(func, "is_internal", False)
+        has_underscore: bool = method_name.startswith("_")
+        has_internal_attr: bool = getattr(func, "is_internal", False)
 
         if not (has_underscore and has_internal_attr):
             class_errors.append(
@@ -66,14 +68,14 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
 
     instance = None
     try:
-        instance = cls()
+        instance: object = cls()
     except Exception as e:
         class_errors.append(
             RuntimeError(f"Could not instantiate '{cls.__name__}' for validation: {e}")
         )
 
     if instance:
-        all_attributes = {
+        all_attributes: dict[str, Any] = {
             name: value
             for name, value in inspect.getmembers(instance)
             if not (inspect.isfunction(value) or inspect.ismethod(value))

@@ -16,9 +16,6 @@
                 "description": {
                     "type": "string"
                 },
-                "required": {
-                    "type": "boolean"
-                },
                 "python_class_name": {
                     "type": "string"
                 }
@@ -26,7 +23,6 @@
             "required": [
                 "type",
                 "description",
-                "required",
                 "python_class_name"
             ],
             "additionalProperties": false

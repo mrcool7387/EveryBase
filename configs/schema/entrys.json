@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        }
+    },
+    "patternProperties": {
+        "^[a-zA-Z0-9_]+$": {
+            "type": "object",
+            "properties": {
+                "field_type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "unique": {
+                    "type": "boolean"
+                },
+                "default": {}
+            },
+            "required": [
+                "field_type",
+                "required",
+                "unique",
+                "default"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}

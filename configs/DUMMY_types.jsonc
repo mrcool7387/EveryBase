@@ -1,3 +1,8 @@
 {
-    "$schema": "./schema/types.json"
+    "$schema": "./schema/types.json",
+    "dummy_class": {
+        "type": "dcls", // The Custom Type Identifier, used in Entrys to reference this Type
+        "description": "This is a Dummy Class for demonstration only", // Description of the Type, shown in the UI
+        "python_class_name": "DummyClass" // The name of the Python Class that will be used for validation and instantiation of this Type, must be unique among all Types
+    }
 }
