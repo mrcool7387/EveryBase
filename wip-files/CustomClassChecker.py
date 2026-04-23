@@ -1,6 +1,5 @@
 import inspect
 from collections.abc import Callable
-from types import FunctionType, MappingProxyType
 from typing import Any
 
 
@@ -10,13 +9,18 @@ def internal(func: Callable) -> Callable:
 
 
 def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
-    required_methods: dict[str, list[str]] = {}
-    allowed_vars: list[str] = []
+    required_methods: dict[str, list[str]] = {
+        "__init__": ["name"],
+        "validate": ["value"],
+        "set_value": ["value"],
+        "get_value": [],
+    }
+    allowed_vars: list[str] = ["name", "value"]
     forbidden_underscores: list[str] = []
     class_errors: list[Exception] = []
 
     # 1. Validate Methods
-    found_methods: dict[str, FunctionType] = {
+    found_methods = {
         name: func
         for name, func in inspect.getmembers(cls, predicate=inspect.isfunction)
         if not (name.startswith("__") and name.endswith("__"))
@@ -31,8 +35,8 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
             )
             continue
 
-        sig: inspect.Signature = inspect.signature(found_methods[method_name])
-        params: MappingProxyType[str, inspect.Parameter] = sig.parameters
+        sig = inspect.signature(found_methods[method_name])
+        params = sig.parameters
 
         for p_name in expected_params:
             if p_name == "args":
@@ -56,8 +60,8 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
         if method_name in required_methods:
             continue
 
-        has_underscore: bool = method_name.startswith("_")
-        has_internal_attr: bool = getattr(func, "is_internal", False)
+        has_underscore = method_name.startswith("_")
+        has_internal_attr = getattr(func, "is_internal", False)
 
         if not (has_underscore and has_internal_attr):
             class_errors.append(
@@ -68,14 +72,14 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
 
     instance = None
     try:
-        instance: object = cls()
+        instance = cls()
     except Exception as e:
         class_errors.append(
             RuntimeError(f"Could not instantiate '{cls.__name__}' for validation: {e}")
         )
 
     if instance:
-        all_attributes: dict[str, Any] = {
+        all_attributes = {
             name: value
             for name, value in inspect.getmembers(instance)
             if not (inspect.isfunction(value) or inspect.ismethod(value))
@@ -109,3 +113,24 @@ def validate_plugin_class(cls) -> tuple[bool, list[Exception]]:
     else:
         # print(f"Class '{cls.__name__}' successfully validated.")
         return True, []
+
+
+class CustomField:
+    def __init__(self, name: str) -> None:
+        self.name = name
+        self.value: Any = None
+    
+    def __repr__(self) -> str:
+        return f"CustomField(name='{self.name}')"
+    
+    def validate(self, value: Any) -> bool:
+        return True
+    
+    def set_value(self, value: Any) -> tuple[bool, str]:
+        if self.validate(value):
+            self.value = value
+            return True, ""
+        return False, f"Value '{value}' is not valid for field '{self.name}'."
+    
+    def get_value(self) -> Any:
+        return self.value
